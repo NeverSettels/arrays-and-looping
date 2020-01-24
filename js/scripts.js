@@ -11,10 +11,10 @@ const numFind = (input, name) => {
         }
         temp.forEach(number => {
             numArr = number.toString().split('')
-            if (numArr.includes('3')) resultArr.push(`I'm sorry, ${name}. I'm afraid I can't do that.`)
-            else if (numArr.includes('2')) resultArr.push('Beep!')
-            else if (numArr.includes('1')) resultArr.push('Boop!')
-            else resultArr.push(number)
+            if (numArr.includes('3')) resultArr.push(`I'm sorry, ${name}. I'm afraid I can't do that,`)
+            else if (numArr.includes('2')) resultArr.push('Beep!,')
+            else if (numArr.includes('1')) resultArr.push('Boop!,')
+            else resultArr.push(`${number},`)
         })
         result = resultArr.join(' ')
     }
