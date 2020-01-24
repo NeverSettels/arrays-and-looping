@@ -47,4 +47,4 @@ $(document).ready(() => {
 $("#resetBtn").click(function () {
     location.reload(true);
 })
-})
+
