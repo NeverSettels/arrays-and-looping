@@ -17,7 +17,6 @@ const numFind = (input, name) => {
             else resultArr.push(number)
         })
         result = resultArr.join(' ')
-
     }
     else {
         result = "Oops! What you entered is not a number"
@@ -28,7 +27,6 @@ const numFind = (input, name) => {
 
 //Front end Logic
 $(document).ready(() => {
-
     $('#form1').submit(event => {
         event.preventDefault()
         var input = parseInt($("#input2").val())
@@ -39,6 +37,7 @@ $(document).ready(() => {
         $('#result-jumbo').removeClass('noDisplay')
     })
 
-
-
+    $("#resetBtn").click(function () {
+        location.reload(true);
+    })
 })
