@@ -4,14 +4,20 @@ const isNum = input => !isNaN(input) ? true : false;
 const numFind = input => {
     var result = ''
     if (isNum(input)) {
+        let resultArr = []
         let temp = []
         for (let i = 1; i <= input; ++i) {
-            if (i === 1) temp.push('Boop!')
-            else if (i === 2) temp.push('Beep!')
-            else if (i === 3) temp.push("I'm sorry, Dave. I'm afraid I can't do that.")
-            else temp.push(i)
+            temp.push(i)
         }
-        result = temp.join(' ')
+        temp.forEach(number => {
+            numArr = number.toString().split('')
+            // console.log(numArr)
+            if (numArr.includes('3')) resultArr.push("I'm sorry, Dave. I'm afraid I can't do that.")
+            else if (numArr.includes('2')) resultArr.push('Beep!')
+            else if (numArr.includes('1')) resultArr.push('Boop!')
+            else resultArr.push(number)
+        })
+        result = resultArr.join(' ')
 
     }
     else {
