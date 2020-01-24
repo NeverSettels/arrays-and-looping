@@ -1,5 +1,10 @@
+body{
+    background-image: url('http://getwallpapers.com/wallpaper/full/c/d/d/1069342-hal-wallpaper-1920x1080-photos.jpg');
+    background-size: cover;
+}
 .jumbotron{
     margin-top: 5vh; 
+    background-color: rgba(128, 128, 128, 0.646);
 }
 
 input[type=text]{

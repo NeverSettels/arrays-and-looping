@@ -34,7 +34,6 @@ $(document).ready(() => {
         var input = parseInt($("#input2").val())
         var name = $("#input1").val()
         var result = numFind(input, name)
-        console.log(result)
         $('#display-result').text(result)
         $('#form-jumbo').addClass('noDisplay')
         $('#result-jumbo').removeClass('noDisplay')
