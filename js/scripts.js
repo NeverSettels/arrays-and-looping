@@ -1,7 +1,7 @@
 //Back end logic
 const isNum = input => !isNaN(input) ? true : false;
 
-const numFind = input => {
+const numFind = (input, name) => {
     var result = ''
     if (isNum(input)) {
         let resultArr = []
@@ -12,7 +12,7 @@ const numFind = input => {
         temp.forEach(number => {
             numArr = number.toString().split('')
             // console.log(numArr)
-            if (numArr.includes('3')) resultArr.push("I'm sorry, Dave. I'm afraid I can't do that.")
+            if (numArr.includes('3')) resultArr.push(`I'm sorry, ${name}. I'm afraid I can't do that.`)
             else if (numArr.includes('2')) resultArr.push('Beep!')
             else if (numArr.includes('1')) resultArr.push('Boop!')
             else resultArr.push(number)
@@ -32,8 +32,9 @@ $(document).ready(() => {
 
     $('#form1').submit(event => {
         event.preventDefault()
-        var input = parseInt($("#input1").val())
-        console.log(input, numFind(input))
+        var input = parseInt($("#input2").val())
+        var name = $("#input1").val()
+        console.log(input, numFind(input, name))
     })
 
 
