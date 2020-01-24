@@ -11,7 +11,6 @@ const numFind = (input, name) => {
         }
         temp.forEach(number => {
             numArr = number.toString().split('')
-            // console.log(numArr)
             if (numArr.includes('3')) resultArr.push(`I'm sorry, ${name}. I'm afraid I can't do that.`)
             else if (numArr.includes('2')) resultArr.push('Beep!')
             else if (numArr.includes('1')) resultArr.push('Boop!')
@@ -34,7 +33,11 @@ $(document).ready(() => {
         event.preventDefault()
         var input = parseInt($("#input2").val())
         var name = $("#input1").val()
-        console.log(input, numFind(input, name))
+        var result = numFind(input, name)
+        console.log(result)
+        $('#display-result').text(result)
+        $('#form-jumbo').addClass('noDisplay')
+        $('#result-jumbo').removeClass('noDisplay')
     })
 
 
