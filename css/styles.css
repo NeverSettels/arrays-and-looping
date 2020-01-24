@@ -1,0 +1,8 @@
+.jumbotron{
+    margin-top: 5vh; 
+}
+
+input[type=text]{
+    width: 50%;
+    margin-left: 25%
+}
