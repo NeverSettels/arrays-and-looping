@@ -6,7 +6,9 @@ const numFind = input => {
     if (isNum(input)) {
         let temp = []
         for (let i = 1; i <= input; ++i) {
-            temp.push(i)
+            if (i === 1) temp.push(i)
+            else if (i === 2) temp.push(i)
+            else if (i === 3) temp.push(i)
         }
         result = temp.join(' ')
 
