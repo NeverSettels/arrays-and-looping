@@ -35,16 +35,16 @@ $(document).ready(() => {
         var result = numFind(input, name);
         var audio = $("#mysoundclip")[0]
 
-        audio.play()
         $('#display-result').text(result);
         $('#form-jumbo').addClass('noDisplay');
         $('#result-jumbo').removeClass('noDisplay');
-
+        audio.play()
 
     })
-})
 
-$("#resetBtn").click(function () {
-    location.reload(true);
+
+    $("#resetBtn").click(function () {
+        location.reload(true);
+    })
 })
 
