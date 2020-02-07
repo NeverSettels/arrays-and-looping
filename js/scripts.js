@@ -2,18 +2,18 @@
 const isNum = input => !isNaN(input) ? true : false;
 
 const numFind = (input, name) => {
-    var result = ''
+    var result = '';
     if (isNum(input)) {
-        let resultArr = []
-        let temp = []
-        for (let i = 1; i <= input; ++i) {
+        let resultArr = [];
+        let temp = [];
+        for (let i = 0; i <= input; ++i) {
             temp.push(i);
         }
         temp.forEach(number => {
-            numArr = number.toString().split('')
+            numArr = number.toString().split('');
             if (numArr.includes('3')) resultArr.push(`I'm sorry, ${name}. I'm afraid I can't do that,`);
-            else if (numArr.includes('2')) resultArr.push('Beep!,');
-            else if (numArr.includes('1')) resultArr.push('Boop!,');
+            else if (numArr.includes('2')) resultArr.push('Boop!,');
+            else if (numArr.includes('1')) resultArr.push('Beep!,');
             else resultArr.push(`${number},`);
 
         })
@@ -24,8 +24,6 @@ const numFind = (input, name) => {
     }
     return result;
 }
-
-
 //Front end Logic
 $(document).ready(() => {
     $('#form1').submit(event => {
@@ -33,18 +31,17 @@ $(document).ready(() => {
         var input = parseInt($("#input2").val());
         var name = $("#input1").val();
         var result = numFind(input, name);
-        var audio = $("#mysoundclip")[0]
+        var audio = $("#mysoundclip")[0];
 
         $('#display-result').text(result);
         $('#form-jumbo').addClass('noDisplay');
         $('#result-jumbo').removeClass('noDisplay');
-        audio.play()
-
-    })
+        audio.play();
+    });
 
 
     $("#resetBtn").click(function () {
         location.reload(true);
-    })
-})
+    });
+});
 
